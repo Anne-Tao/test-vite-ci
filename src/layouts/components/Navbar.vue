@@ -14,7 +14,7 @@
           <router-link to="/">
             <el-dropdown-item> 首页 </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://github.com/57code/vite2-in-action/">
+          <a target="_blank" href="https://github.com/Anne-Tao/">
             <el-dropdown-item>我的Github</el-dropdown-item>
           </a>
         </el-dropdown-menu>

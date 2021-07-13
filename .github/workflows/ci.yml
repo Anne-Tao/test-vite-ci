@@ -9,5 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 迁出代码
       - uses: actions/checkout@master
+      - name: 迁出代码
+    

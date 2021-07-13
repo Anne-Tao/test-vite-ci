@@ -1,0 +1,35 @@
+name: 打包上传阿里云
+
+on:
+  push:
+    branch:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 迁出代码
+      - uses: actions/checkout@master
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.0.0
+
+      - name: 安装依赖
+        run: npm install 
+
+      - name: 打包
+        run: npm run build
+
+      - name: 安装 Node.js
+        uses: easingthemes/ssh-deploy@2.1.1
+        env: 
+          SSH_PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+          ARGS: "-avzr --delete"
+          SOURCE: "dist"
+          REMOTE_HOST: "47.105.98.44"
+          REMOTE_USER: "root"
+          TARGET: "/home/vue-in-action"
+

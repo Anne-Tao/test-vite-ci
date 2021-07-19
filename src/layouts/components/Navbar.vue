@@ -15,7 +15,7 @@
             <el-dropdown-item> 首页 </el-dropdown-item>
           </router-link>
           <a target="_blank" href="https://github.com/Anne-Tao/">
-            <el-dropdown-item>我的Github1</el-dropdown-item>
+            <el-dropdown-item>我的Github2</el-dropdown-item>
           </a>
         </el-dropdown-menu>
       </el-dropdown>
